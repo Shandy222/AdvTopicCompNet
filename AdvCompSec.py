@@ -82,7 +82,7 @@ def Framework():
                 return ("Hybrid - Ethereum")
 
             elif p == "N":
-                ELC = ELCmaturity
+                ELC = ELCmaturity()
                 if ELC == "Efficiency & low cost":
                     return ("Pubic EOSIO")
 
@@ -97,7 +97,7 @@ def Framework():
                     return ("Hybrid - Ethereum")
 
                 elif p == "N":
-                    ELC = ELCmaturity
+                    ELC = ELCmaturity()
                     if ELC == "Efficiency & low cost":
                         return ("Pubic EOSIO")
 
