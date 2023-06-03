@@ -64,15 +64,15 @@ def Framework():
         elif p == "N":
             ps = paymentsize()
             if ps == "Y":
-                return ("Pubic - Ethereum")
+                return ("Public - Ethereum")
             
             elif ps == "N":
                 ELC = ELCmaturity()
                 if ELC == "Efficiency & low cost":
-                    return ("Pubic EOSIO")
+                    return ("Public EOSIO")
 
                 elif ELC == "Maturity":
-                    return ("Pubic - Ethereum")
+                    return ("Public - Ethereum")
 
     elif crypto == "N":
         cc = contractconditions()
@@ -84,10 +84,10 @@ def Framework():
             elif p == "N":
                 ELC = ELCmaturity()
                 if ELC == "Efficiency & low cost":
-                    return ("Pubic EOSIO")
+                    return ("Public EOSIO")
 
                 elif ELC == "Maturity":
-                    return ("Pubic - Ethereum")
+                    return ("Public - Ethereum")
         
         elif cc == "N":
             g = governance()
@@ -99,10 +99,10 @@ def Framework():
                 elif p == "N":
                     ELC = ELCmaturity()
                     if ELC == "Efficiency & low cost":
-                        return ("Pubic EOSIO")
+                        return ("Public EOSIO")
 
                     elif ELC == "Maturity":
-                        return ("Pubic - Ethereum")
+                        return ("Public - Ethereum")
 
             elif g == "Consortium":
                 EM = Ematurity()
