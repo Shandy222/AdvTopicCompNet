@@ -55,6 +55,69 @@ def Ematurity():
     return a
 
 def Framework():
-    print(cryptocurrency())
+    crypto = cryptocurrency()
+    if crypto == "Y":
+        p = privacy()
+        if p == "Y":
+            return ("Hybrid - Ethereum")
 
-Framework()
+        elif p == "N":
+            ps = paymentsize()
+            if ps == "Y":
+                return ("Pubic - Ethereum")
+            
+            elif ps == "N":
+                ELC = ELCmaturity()
+                if ELC == "Efficiency & low cost":
+                    return ("Pubic EOSIO")
+
+                elif ELC == "Maturity":
+                    return ("Pubic - Ethereum")
+
+    elif crypto == "N":
+        cc = contractconditions()
+        if cc == "Y":
+            p = privacy()
+            if p == "Y":
+                return ("Hybrid - Ethereum")
+
+            elif p == "N":
+                ELC = ELCmaturity
+                if ELC == "Efficiency & low cost":
+                    return ("Pubic EOSIO")
+
+                elif ELC == "Maturity":
+                    return ("Pubic - Ethereum")
+        
+        elif cc == "N":
+            g = governance()
+            if g == "Decentralized":
+                p = privacy()
+                if p == "Y":
+                    return ("Hybrid - Ethereum")
+
+                elif p == "N":
+                    ELC = ELCmaturity
+                    if ELC == "Efficiency & low cost":
+                        return ("Pubic EOSIO")
+
+                    elif ELC == "Maturity":
+                        return ("Pubic - Ethereum")
+
+            elif g == "Consortium":
+                EM = Ematurity()
+                if EM == "Efficiency":
+                    return ("Consortium - Hyperledger Fabric")
+
+                elif EM == "Maturity":
+                    return ("Consortium - Ethereum")
+
+            elif g == "Centralized":
+                EM = Ematurity()
+                if EM == "Efficiency":
+                    return ("Private - Hyperledger Fabric")
+
+                elif EM == "Maturity":
+                    return ("Private - Ethereum")
+                    
+print(Framework())
